@@ -1,0 +1,175 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: burlywood;
+    display: grid;
+    position: relative;
+
+    * {
+        transition: 100ms;
+    }
+
+    .window-alert {
+        position: absolute;
+        place-self: center;
+        background-color: crimson;
+        border: 2px solid gold;
+        width: 20%;
+        aspect-ratio: 2/1;
+        display: grid;
+        grid-template-rows: 20px 1fr;
+
+        .close-window {
+            color: black;
+            cursor: pointer;
+            width: 10%;
+            aspect-ratio: 1/1;
+            grid-row: 1;
+            justify-self: end;
+            align-self: center;
+            margin: 10px 5px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 20px;
+            }
+
+            button:hover {
+                color: white;
+                font-size: 24px;
+                transform: translate(-0.5px, 1px);
+            }
+        }
+
+        .window-message {
+            grid-row: 2;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            cursor: default;
+            font-size: 20px;
+
+            span {
+                margin-top: 10px;
+                font-size: 36px;
+                transform: rotate(90deg);
+                align-self: center;
+                color: darkblue;
+            }
+
+        }
+    }
+
+    .container {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        .element-1 {
+            text-align: left;
+            border: 2px solid gold;
+            background-color: whitesmoke;
+
+            ion-icon {
+                transform: translateY(3px);
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 20px auto;
+                font-style: oblique;
+                width: 80%;
+
+                .blue {
+                    color: cornflowerblue;
+                    font-weight: bold;
+                }
+
+                .red {
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+        .element-2 {
+            margin-bottom: 80px;
+            width: 100%;
+            padding: 20px 0;
+            background-color: lightblue;
+            border: 5px dotted white;
+
+            form {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+
+                div {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+
+                    label {
+                        font-size: 20px;
+                        font-weight: bold;
+                        font-style: italic;
+                        grid-row: 1;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    #number,
+                    #number2 {
+                        height: 30px;
+                        background-color: grey;
+                        border: 2px solid cyan;
+                        grid-row: 2;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        margin-right: 20px;
+
+                    }
+
+                    #number:focus,
+                    #number2:focus {
+                        outline: 2px solid gold;
+                        background-color: darkseagreen;
+                    }
+
+                    #number:hover,
+                    #number2:hover,
+                    #submit:hover {
+                        box-shadow: 5px 5px 10px black;
+                    } 
+                }
+
+
+
+                #submit {
+                    background-color: brown;
+                    border: 2px solid blue;
+                    width: 100px;
+                    aspect-ratio: 2/1;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    color: white;
+                    font-size: bold;
+                    font-variant: small-caps;
+                    font-size: 18px;
+                }
+
+                #submit:hover {
+                    box-shadow: 5px 5px 10px black;
+                } 
+            }
+        }
+    }
+}
