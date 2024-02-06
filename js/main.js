@@ -35,7 +35,7 @@ function calculate() {
     let total2;
     let incrementBig;
     let totalBig;
-    console.log(typeof text.value, text.value, typeof text2.value, text2.value);
+
     if (text.value === "" || text2.value === "") {
         if (windowCount <= 0) {
             windowMessage();
